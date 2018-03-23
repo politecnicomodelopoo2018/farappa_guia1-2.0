@@ -17,7 +17,7 @@ class Alumno (object):
         if nota > 10:
             return False
         if nota < 1:
-            return False
+            return False-
         self.listaNotas.append(nota)
         return True
     def mayorNota (self):

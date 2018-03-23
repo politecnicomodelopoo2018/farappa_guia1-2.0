@@ -5,8 +5,7 @@ class Empresa(object):
 
 
     def __init__(self):
-        self.listaEmp = \
-            []
+        self.listaEmp = []
 
     def AgregarEmpleado(self, nombre, apellido, tel, fecha):
         empleado = Empleado()
