@@ -15,8 +15,7 @@ class Family(object):
         Cal=0
         for a in self.listaPersonas:
             if a.Nombre == Nombre:
-                for b in a.ListaComidas:
-                    Cal+=b.Calorias
+                return a.CaloriasTotal
         return Cal
     def Prom(self):
         Cal=0
