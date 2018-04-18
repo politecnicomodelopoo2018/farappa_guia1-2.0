@@ -12,5 +12,6 @@ class Album(object):
     #def AgregarAu(self,tit):
         #   for a in self.ListaCan:
     #   if a.Titulo == tit:
+
                 # for b in a.ListaAut:
 
