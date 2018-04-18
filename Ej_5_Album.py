@@ -9,8 +9,8 @@ class Album(object):
     def AgregarCancion(self,titulo):
         Caca=Cancion()
         self.ListaCan.append(titulo)
-    def AgregarAu(self,tit):
-        for a in self.ListaCan:
-            if a.Titulo == tit:
-                for b in a.ListaAut:
+    #def AgregarAu(self,tit):
+        #   for a in self.ListaCan:
+    #   if a.Titulo == tit:
+                # for b in a.ListaAut:
 
