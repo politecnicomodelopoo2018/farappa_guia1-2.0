@@ -7,11 +7,21 @@ class Album(object):
         self.ListaCan = []
 
     def AgregarCancion(self,titulo):
-        Caca=Cancion()
-        self.ListaCan.append(titulo)
-    #def AgregarAu(self,tit):
-        #   for a in self.ListaCan:
-    #   if a.Titulo == tit:
+        a = Cancion(titulo)
+        self.ListaCan.append(a)
 
-                # for b in a.ListaAut:
+    def agregarArt(self,NombreCan,NameAr,Ape,Fecha):
+        for a in self.ListaCan:
+            if NombreCan == a.Titulo:
+                a.AgregarArtista(NameAr,Ape,Fecha)
+
+    def agregarAutor(self,nombreCan,nombreAu,Ape,Fecha):
+        for a in self.ListaCan:
+            if nombreCan == a.Titulo:
+                a.AgregarAutor(nombreAu,Ape,Fecha)
+
+    def nacArt(self,nomCan,noma,pais):
+        for a in self.ListaCan:
+            if nomCan == a.Titulo:
+                a.nac(noma,pais)
 
