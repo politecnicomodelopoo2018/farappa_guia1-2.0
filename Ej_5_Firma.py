@@ -54,3 +54,6 @@ class  Firma(object):
 
 
 
+
+  # Conviene hacerlo pasandole directamente el autor/artista
+

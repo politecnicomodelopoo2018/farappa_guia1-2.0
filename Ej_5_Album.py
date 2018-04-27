@@ -25,3 +25,6 @@ class Album(object):
             if nomCan == a.Titulo:
                 a.nac(noma,pais)
 
+t
+
+
