@@ -1,3 +1,3 @@
-from Ej_5_Firma import Firma
-Pedro = Firma('Pedro')
-print(Pedro.Nombre)
+from Ej_7_Menu import MenuVerga
+
+Menu = MenuVerga()

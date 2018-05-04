@@ -1,8 +1,8 @@
 class Plato(object):
     Nombre=None
-    Apellido=None
+    Precio=None
 
-    def __init__(self,nom,ap):
+    def __init__(self,nom,prec):
         self.Nombre=nom
-        self.Apellido=ap
+        self.Precio=prec
 

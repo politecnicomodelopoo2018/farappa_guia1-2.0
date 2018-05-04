@@ -1,8 +1,11 @@
 class LasBufes(object):
     def __init__(self):
         self.Pedidos=[]
+        self.Platos=[]
     def AgregarPedidos(self,pedido):
         self.Pedidos=pedido
+    def AgregarPlato(self,platoto):
+        self.Platos.append(platoto)
     def PlatosdelDia(self,fecha):
         for a in self.Pedidos:
             if a.fecha==fecha:
@@ -10,22 +13,12 @@ class LasBufes(object):
     def borrarPedido(self,codigo):
         for a in self.Pedidos:
             if a.codigo == codigo:
-                self.Pedidos.remove(self,a)
-
-
-    def ModPedido(self,Codigo,QueQuiereModificar,loquemete):
-        for a in self.Pedidos:
-            if a.codigo==Codigo:
-                a.mod(QueQuiereModificar,loquemete)
-
-
-
-    def modpla(self,codigo,meter):
+                self.Pedidos.remove(a)
+    def Modificarplatoto(self,codigo,nombre):
         for a in self.Pedidos:
             if a.codigo==codigo:
-                a.modpla(meter)
+                for b in self.Platos:
+                    if b.Nombre==nombre:
+                        a.ModPlato(b)
 
-    def modper(self,codigo,meter):
-        for a in self.Pedidos:
-            if a.codigo == codigo:
-                a.modpers(meter)
+
