@@ -46,7 +46,5 @@ class Persona(object):
         for a in self.lista_medidas:
             return a.Peso
 
-
-
-
+    def
 

@@ -4,7 +4,8 @@ class Pedido(object):
     entregado=None
     platoto=None
     persona=None
-    def __init__(self,fecha,plato,persona,en):
+    def __init__(self,cod,fecha,en,plato,persona):
+        self.codigo=cod
         self.fecha=fecha
         self.platoto=plato
         self.persona=persona

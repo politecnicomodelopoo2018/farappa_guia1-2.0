@@ -1,6 +1,7 @@
 class Persona(object):
     Nombre=None
     Apellido=None
+    Pk =
 
     def __init__(self,n,a):
         self.Nombre=n
