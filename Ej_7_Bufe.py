@@ -36,5 +36,6 @@ class LasBufes(object):
             aux = line.split('|')
             unaP=Alumno(aux[0],aux[1],aux[2])
         f.close()
-    
+
+    #Hacer un ID para persona
 
