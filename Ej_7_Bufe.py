@@ -1,4 +1,7 @@
+from Ej_7_Bufe import LasBufes
 from Ej_7_Alumno import Alumno
+from Ej_7_Pedido import Pedido
+from Ej_7_Profesor import Profe
 class LasBufes(object):
     def __init__(self):
         self.Pedidos=[]
@@ -23,19 +26,37 @@ class LasBufes(object):
                         a.ModPlato(b)
 
     def GuardarAlumnos(self):
-        f = open('Perasonas.Tomic', 'w')
+        f = open('Personas.Tomic', 'w')
         for a in self.Pedidos:
-            if a.Desc() == 0:
-                f.write(a.persona.Nombre + '|' + a.persona.Apellido + '|' + a.persona.Division + '\n')
+            if a.persona.Desc() == 0:
+                f.write(a.persona.ID + '|' + a.persona.Nombre + '|' + a.persona.Apellido + '|' + a.persona.Division + '\n')
             else :
-                f.write(a.persona.Nombre + '|' + a.persona.Apellido + '|' + a.persona.Descuento + '\n')
+                f.write(a.persona.ID + '|' + a.persona.Nombre + '|' + a.persona.Apellido + '|' + a.persona.Descuento + '\n')
         f.close()
     def Abrirlo(self):
-        f = open('Perasonas.Tomic','r')
+        listaPeidosNew=[]
+        f = open('Pedidos.Tomic','r')
         for line in f:
             aux = line.split('|')
-            unaP=Alumno(aux[0],aux[1],aux[2])
+            Pedi=Pedido(aux[0],aux[1],aux[2],aux[3],aux[4])
+            listaPeidosNew.append(Pedi)
         f.close()
+        k = open('Personas.Tomic','r')
+        for line in k:
+            aux = line.split('|')
+                for a in listaPeidosNew:
+                    if aux[0] == a.persona:
+                        if aux[0] ==  # Preguntar%(Profe) :
+                            Prof=Profe(aux[0],aux[1],aux[2],aux[3])
+                            a.persona=Prof
+                        if aux[0] ==  # Preguntar%(Alumno) :
+                            Al = Alumno(aux[0], aux[1], aux[2], aux[3])
+                            a.persona=Al
+        k.close()
+        f = open('Platos.Tomic', 'r')
+        for line in f:
 
-    #Hacer un ID para persona
 
+
+
+    #Cargo todos las personas de los pedidos y dsp todos los platos
