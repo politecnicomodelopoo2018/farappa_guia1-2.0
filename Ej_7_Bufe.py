@@ -1,7 +1,8 @@
-from Ej_7_Bufe import LasBufes
+
 from Ej_7_Alumno import Alumno
 from Ej_7_Pedido import Pedido
 from Ej_7_Profesor import Profe
+from Ej_7_Plato import Plato
 class LasBufes(object):
     def __init__(self):
         self.Pedidos=[]
@@ -53,8 +54,21 @@ class LasBufes(object):
                             Al = Alumno(aux[0], aux[1], aux[2], aux[3])
                             a.persona=Al
         k.close()
-        f = open('Platos.Tomic', 'r')
-        for line in f:
+        x = open('Platos.Tomic', 'r')
+        for line in x:
+            aux = line.split('|')
+            Plat = Plato(aux[0], aux[1])
+            for a in listaPeidosNew:
+                if aux[0] == a.platoto:
+                    a.platoto=Plat
+
+        if  listaPeidosNew != []:
+
+
+
+
+
+
 
 
 

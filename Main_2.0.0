@@ -1,6 +1,7 @@
 from Ej_7_Bufe import LasBufes
 from Ej_7_Alumno import Alumno
 from Ej_7_Pedido import Pedido
+from Ej_
 
 a = Alumno('Pedro','Alfonsin','5')
 a1 = Alumno('Pedro','Raul','5')
